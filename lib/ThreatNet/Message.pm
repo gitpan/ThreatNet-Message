@@ -31,7 +31,7 @@ use overload 'bool' => sub () { 1 },
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.01';
+	$VERSION = '0.02';
 }
 
 
@@ -53,7 +53,7 @@ This base class is extremely flexible and makes absolutely no requirements
 on the content of the message, even that is has length.
 
 For an example of a potentially more useful Message class, see
-L<ThreatNet::Message::GenericIPv4
+L<ThreatNet::Message::GenericIPv4>
 
 Returns a ThreatNet::Message object on success, false if the message is not
 a valid message for a particular message class, or C<undef> on error, such
@@ -93,7 +93,7 @@ sub message { $_[0]->{message} }
 
 All bugs should be filed via the bug tracker at
 
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ThreatNet%3A%3AMessage>
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ThreatNet-Message>
 
 For other issues, or commercial enhancement and support, contact the author
 
@@ -103,8 +103,7 @@ Adam Kennedy (Maintainer), L<http://ali.as/>, cpan@ali.as
 
 =head1 SEE ALSO
 
-L<http://ali.as/devel/threatnetwork.html>, L<ThreatNet::Topic>,
-L<ThreatNet::M
+L<http://ali.as/devel/threatnetwork.html>, L<ThreatNet::Topic>
 
 =head1 COPYRIGHT
 

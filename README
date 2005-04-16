@@ -42,7 +42,7 @@ METHODS
 SUPPORT
     All bugs should be filed via the bug tracker at
 
-    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ThreatNet%3A%3AMessage>
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ThreatNet-Message>
 
     For other issues, or commercial enhancement and support, contact the
     author
@@ -51,7 +51,7 @@ AUTHORS
     Adam Kennedy (Maintainer), <http://ali.as/>, cpan@ali.as
 
 SEE ALSO
-    <http://ali.as/devel/threatnetwork.html>, ThreatNet::Topic, ThreatNet::M
+    <http://ali.as/devel/threatnetwork.html>, ThreatNet::Topic
 
 COPYRIGHT
     Copyright (c) 2004 Adam Kennedy. All rights reserved. This program is
