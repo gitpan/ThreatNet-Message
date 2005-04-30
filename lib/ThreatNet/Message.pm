@@ -8,10 +8,9 @@ ThreatNet::Message - An object representation of a ThreatNet channel message
 
 =head1 DESCRIPTION
 
-ThreatNet is an evolving idea. A proposal generally defining what it
-B<might> become is available at:
+ThreatNet is an evolving idea. It's homepage at time of publishing is
 
-L<http://ali.as/devel/threatnetwork.html>
+L<http://ali.as/threatnet/>
 
 This module is an abstract base class for a ThreatNet channel message,
 and allows you to create objects representing threat messages in a channel.
@@ -31,7 +30,7 @@ use overload 'bool' => sub () { 1 },
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.02';
+	$VERSION = '0.03';
 }
 
 
@@ -63,7 +62,7 @@ as being passed a non-string.
 
 sub new {
 	my $class   = ref $_[0] ? ref shift : shift;
-	my $message = (defined $_[0] and ! ref $_[0]) ? shift : return undef;
+	my $message = _STRING0($_[0]) ? shift : return undef;
 
 	# Create the object
 	my $self = bless {
@@ -84,6 +83,17 @@ and might not be identical to the original string.
 =cut
 
 sub message { $_[0]->{message} }
+
+
+
+
+
+#####################################################################
+# Support Functions
+
+sub _STRING0 ($) {
+	!! (defined $_[0] and ! ref $_[0]);
+}
 
 1;
 

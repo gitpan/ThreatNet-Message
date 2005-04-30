@@ -3,10 +3,9 @@ NAME
     message
 
 DESCRIPTION
-    ThreatNet is an evolving idea. A proposal generally defining what it
-    might become is available at:
+    ThreatNet is an evolving idea. It's homepage at time of publishing is
 
-    <http://ali.as/devel/threatnetwork.html>
+    <http://ali.as/threatnet/>
 
     This module is an abstract base class for a ThreatNet channel message,
     and allows you to create objects representing threat messages in a

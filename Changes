@@ -1,5 +1,8 @@
 Revision history for Perl extension ThreatNet::Message
 
+0.03 Sat Apr 30 2004
+	- Adding ThreatNet::Message::IPv4
+
 0.02 Sun Apr 17 2004
 	- Incrementing to fix POD bug
 
