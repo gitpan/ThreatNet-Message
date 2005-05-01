@@ -20,7 +20,7 @@ BEGIN {
 
 
 # Does everything load?
-use Test::More 'tests' => 24;
+use Test::More 'tests' => 34;
 use ThreatNet::Message ();
 
 # Create the test data
@@ -45,6 +45,8 @@ foreach my $string ( @good ) {
 	ok( $Message, 'bool overload returns true' );
 	is( $Message->message, $string, '->message returns original string' );
 	is( "$Message", $string, 'Stringify overload returns string' );
+	ok( $Message->created, '->created returns true' );
+	ok( $Message->event_time, '->event_time returns true' );
 }
 foreach my $something ( @bad ) {
 	my $Message = ThreatNet::Message->new($something);

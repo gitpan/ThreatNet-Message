@@ -20,7 +20,7 @@ BEGIN {
 
 
 # Does everything load?
-use Test::More tests => 15;
+use Test::More tests => 21;
 use ThreatNet::Message::IPv4 ();
 
 # Create the test data
@@ -44,6 +44,8 @@ foreach my $ip ( @good ) {
 	isa_ok( $Message, 'ThreatNet::Message::IPv4' );
 	isa_ok( $Message->IP, 'Net::IP' );
 	is( $Message->ip, $nums, '->ip returns as expected' );
+	ok( $Message->created, '->created returns true' );
+	ok( $Message->event_time, '->event_time returns true' );
 }
 
 foreach my $ip ( @bad ) {

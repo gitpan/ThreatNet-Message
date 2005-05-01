@@ -29,14 +29,36 @@ METHODS
     For an example of a potentially more useful Message class, see
     ThreatNet::Message::GenericIPv4
 
-    Returns a ThreatNet::Message object on success, false if the message is
-    not a valid message for a particular message class, or "undef" on error,
-    such as being passed a non-string.
+    Returns a "ThreatNet::Message" object on success, false if the message
+    is not a valid message for a particular message class, or "undef" on
+    error, such as being passed a non-string.
 
   message
-    For any ThreatNet::Messsage class, the "message" accessor will always
+    For any "ThreatNet::Messsage" class, the "message" accessor will always
     return the message in string form, although it may have been
     canonicalised and might not be identical to the original string.
+
+  created
+    The "created" method returns the unix epoch time that the
+    "ThreatNet::Message" object was created (on the machine on which the
+    object was created).
+
+    For some situations, this will be sufficient for use as the time at
+    which the event occured. Please be aware however, that it is "not" the
+    time at which the event actually occured.
+
+    Some protocols may supply the actual event time independantly.
+
+    Returns the unix epoch time in seconds as an integer.
+
+  event_time
+    The "event_time" method returns the event time, or as close an estimate
+    as the object is capable of providing.
+
+    Unless the "ThreatNet::Message" class is actually aware of the true
+    event time, it will generally estimate using the object creation time.
+
+    Returns the unix epoch time in seconds as an integer.
 
 SUPPORT
     All bugs should be filed via the bug tracker at
@@ -53,9 +75,9 @@ SEE ALSO
     <http://ali.as/devel/threatnetwork.html>, ThreatNet::Topic
 
 COPYRIGHT
-    Copyright (c) 2004 Adam Kennedy. All rights reserved. This program is
-    free software; you can redistribute it and/or modify it under the same
-    terms as Perl itself.
+    Copyright (c) 2004 - 2005 Adam Kennedy. All rights reserved. This
+    program is free software; you can redistribute it and/or modify it under
+    the same terms as Perl itself.
 
     The full text of the license can be found in the LICENSE file included
     with this module.

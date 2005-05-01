@@ -6,7 +6,7 @@ use Net::IP ();
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.03';
+	$VERSION = '0.04';
 }
 
 
@@ -57,6 +57,8 @@ sub comment { $_[0]->{comment} }
 
 
 #####################################################################
-# Main Methods
+# Param::Coerce Support
+
+sub __as_Net_IP { $_[0]->IP }
 
 1;
